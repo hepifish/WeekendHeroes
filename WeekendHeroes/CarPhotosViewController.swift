@@ -12,8 +12,8 @@ final class CarPhotosViewController: UICollectionViewController {
     
     let reuseIdentifier = "CarCell" // also enter this string as the cell identifier in the storyboard
     let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
-    let itemsPerRow: CGFloat = 3
-    var items = ["alfasud-2_0.jpg", "alfasud-2_0.jpg", "alfasud-2_0.jpg", "alfasud-2_0.jpg", "alfasud-2_0.jpg"]
+    let itemsPerRow: CGFloat = 2
+    var items = ["alfasud-2_0.jpg", "550_maranello.jpg", "365_gt16-9.jpg", "ariston.jpg", "speedster_mobile.jpg"]
 }
 
 private extension CarPhotosViewController {
@@ -30,16 +30,14 @@ extension CarPhotosViewController {
         return items.count
     }
     
-    override func collectionView(_ collectionView: UICollectionView,
-                                 cellForItemAt indexPath : IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CarPhotoCell
-        if let carPhoto = photoForIndexPath(indexPath){
-            cell.imageView.image = carPhoto
-        }
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CarCell", for: indexPath) as! CarPhotoCell
+        cell.imageView.image = photoForIndexPath(indexPath)
         cell.backgroundColor = UIColor.black
-        return cell;
+        return cell
     }
 }
+
 
 extension CarPhotosViewController : UICollectionViewDelegateFlowLayout {
     
@@ -50,8 +48,9 @@ extension CarPhotosViewController : UICollectionViewDelegateFlowLayout {
         let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
         let availableWidth = view.frame.width - paddingSpace
         let widthPerItem = availableWidth / itemsPerRow
+        let heightPerItem : CGFloat = 250
         
-        return CGSize(width: widthPerItem, height: widthPerItem)
+        return CGSize(width: widthPerItem, height: heightPerItem)
     }
     
     func collectionView(_ collectionView: UICollectionView,
