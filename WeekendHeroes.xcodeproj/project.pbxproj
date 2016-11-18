@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8422C4241DCA9BE3005F11DF /* CarPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8422C4221DCA9BE3005F11DF /* CarPhotoCell.swift */; };
 		8422C4251DCA9BE3005F11DF /* CarPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8422C4231DCA9BE3005F11DF /* CarPhotosViewController.swift */; };
-		8422C4271DCA9D5B005F11DF /* alfasud-2_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8422C4261DCA9D5B005F11DF /* alfasud-2_0.jpg */; };
 		845555AB1DCA990900F71816 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845555AA1DCA990900F71816 /* AppDelegate.swift */; };
 		845555AD1DCA990900F71816 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845555AC1DCA990900F71816 /* ViewController.swift */; };
 		845555B01DCA990900F71816 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845555AE1DCA990900F71816 /* Main.storyboard */; };
@@ -30,7 +29,6 @@
 /* Begin PBXFileReference section */
 		8422C4221DCA9BE3005F11DF /* CarPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarPhotoCell.swift; sourceTree = "<group>"; };
 		8422C4231DCA9BE3005F11DF /* CarPhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarPhotosViewController.swift; sourceTree = "<group>"; };
-		8422C4261DCA9D5B005F11DF /* alfasud-2_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "alfasud-2_0.jpg"; path = "WeekendHeroes/alfasud-2_0.jpg"; sourceTree = "<group>"; };
 		845555A71DCA990900F71816 /* WeekendHeroes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeekendHeroes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		845555AA1DCA990900F71816 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		845555AC1DCA990900F71816 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,7 +72,6 @@
 				849FD56D1DDA572F007E8F7D /* m1_front_0.jpg */,
 				849FD56E1DDA572F007E8F7D /* speedster_mobile.jpg */,
 				849FD56F1DDA572F007E8F7D /* wh_signet.svg */,
-				8422C4261DCA9D5B005F11DF /* alfasud-2_0.jpg */,
 				845555A91DCA990900F71816 /* WeekendHeroes */,
 				845555A81DCA990900F71816 /* Products */,
 			);
@@ -165,7 +162,6 @@
 			files = (
 				849FD5781DDA572F007E8F7D /* speedster_mobile.jpg in Resources */,
 				849FD5711DDA572F007E8F7D /* 550_maranello.jpg in Resources */,
-				8422C4271DCA9D5B005F11DF /* alfasud-2_0.jpg in Resources */,
 				849FD5771DDA572F007E8F7D /* m1_front_0.jpg in Resources */,
 				845555B51DCA990900F71816 /* LaunchScreen.storyboard in Resources */,
 				849FD5791DDA572F007E8F7D /* wh_signet.svg in Resources */,

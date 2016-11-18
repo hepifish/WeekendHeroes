@@ -11,9 +11,9 @@ import UIKit
 final class CarPhotosViewController: UICollectionViewController {
     
     let reuseIdentifier = "CarCell" // also enter this string as the cell identifier in the storyboard
-    let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
+    let sectionInsets = UIEdgeInsets(top: 40.0, left: 40.0, bottom: 20.0, right: 40.0)
     let itemsPerRow: CGFloat = 2
-    var items = ["alfasud-2_0.jpg", "550_maranello.jpg", "365_gt16-9.jpg", "ariston.jpg", "speedster_mobile.jpg"]
+    var items = ["k101_close.jpg", "550_maranello.jpg", "365_gt16-9.jpg", "ariston.jpg", "speedster_mobile.jpg"]
 }
 
 private extension CarPhotosViewController {
@@ -47,8 +47,9 @@ extension CarPhotosViewController : UICollectionViewDelegateFlowLayout {
         
         let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
         let availableWidth = view.frame.width - paddingSpace
-        let widthPerItem = availableWidth / itemsPerRow
-        let heightPerItem : CGFloat = 250
+      //  let widthPerItem = availableWidth / itemsPerRow
+        let widthPerItem : CGFloat = 450
+        let heightPerItem : CGFloat = 253
         
         return CGSize(width: widthPerItem, height: heightPerItem)
     }
