@@ -27,44 +27,30 @@ final class CarPhotosViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CarCell", for: indexPath) as! CarPhotoCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CarPhotoCell
         cell.imageView.image = photoForIndexPath(indexPath)
         cell.backgroundColor = UIColor.black
+        if(collectionView.frame.width > 1024){
+            cell.imageView.frame = CGRect(x: 0, y: 0, width: 660, height: 371)
+        }else{
+            cell.imageView.frame = CGRect(x: 0, y: 0, width: CELL_WIDTH, height: CELL_HEIGHT)
+        }
         return cell
     }
 }
 
 extension CarPhotosViewController : UICollectionViewDelegateFlowLayout {
     
-//    - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
-//    {
-//    // Adjust cell size for orientation
-//    if (UIDeviceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation])) {
-//    return CGSizeMake(170.f, 170.f);
-//    }
-//    return CGSizeMake(192.f, 192.f);
-//    }
-//    
-//    - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
-//    {
-//    [self.collectionView performBatchUpdates:nil completion:nil];
-//    }
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         var size = CGSize()
-        
-        
-        if UIDeviceOrientationIsLandscape(UIDevice.current.orientation) {
-            size = CGSize(width: CELL_WIDTH * 2, height: CELL_HEIGHT * 2)
-        } else {
+        if collectionView.frame.width > 1024{
+            print(collectionView.frame.width)
+            size = CGSize(width: 660, height: 371)
+        }else{
             size = CGSize(width: CELL_WIDTH, height: CELL_HEIGHT)
+
         }
-       // let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
-        //let availableWidth = view.frame.width - paddingSpace
-      //  let widthPerItem = availableWidth / itemsPerRow
-//        let widthPerItem : CGFloat = 450
-//        let heightPerItem : CGFloat = 253
         
         return size
     }
@@ -79,3 +65,5 @@ extension CarPhotosViewController : UICollectionViewDelegateFlowLayout {
         return sectionInsets.left
     }
 }
+
+
