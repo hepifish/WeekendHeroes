@@ -10,10 +10,13 @@ import UIKit
 
 final class CarPhotosViewController: UICollectionViewController {
     
-    let reuseIdentifier = "CarCell" // also enter this string as the cell identifier in the storyboard
-    let sectionInsets = UIEdgeInsets(top: 40.0, left: 40.0, bottom: 20.0, right: 40.0)
+    let reuseIdentifier = "CarCell"
+    let CELL_WIDTH : CGFloat = 488
+    let CELL_HEIGHT : CGFloat = 275
+    let sectionInsets = UIEdgeInsets(top: 40.0, left: 14.0, bottom: 20.0, right: 14.0)
     let itemsPerRow: CGFloat = 2
-    var items = ["k101_close.jpg", "550_maranello.jpg", "365_gt16-9.jpg", "ariston.jpg", "speedster_mobile.jpg"]
+    var items = ["k101_close.jpg", "550_maranello.jpg", "365_gt16-9.jpg", "ariston.jpg", "speedster_mobile.jpg", "m1_front_0.jpg"]
+    
 }
 
 private extension CarPhotosViewController {
@@ -25,8 +28,7 @@ private extension CarPhotosViewController {
 
 // MARK: - UICollectionViewDataSource
 extension CarPhotosViewController {
-    override func collectionView(_ collectionView: UICollectionView,
-                                 numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return items.count
     }
     
@@ -41,17 +43,22 @@ extension CarPhotosViewController {
 
 extension CarPhotosViewController : UICollectionViewDelegateFlowLayout {
     
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                               sizeForItemAt indexPath: IndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
-        let availableWidth = view.frame.width - paddingSpace
+        var size = CGSize()
+        
+        if UIDeviceOrientationIsLandscape(UIDevice.current.orientation) {
+            size = CGSize(width: CELL_WIDTH * 2, height: CELL_HEIGHT * 2)
+        } else {
+            size = CGSize(width: CELL_WIDTH, height: CELL_HEIGHT)
+        }
+       // let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
+        //let availableWidth = view.frame.width - paddingSpace
       //  let widthPerItem = availableWidth / itemsPerRow
-        let widthPerItem : CGFloat = 450
-        let heightPerItem : CGFloat = 253
+//        let widthPerItem : CGFloat = 450
+//        let heightPerItem : CGFloat = 253
         
-        return CGSize(width: widthPerItem, height: heightPerItem)
+        return size
     }
     
     func collectionView(_ collectionView: UICollectionView,

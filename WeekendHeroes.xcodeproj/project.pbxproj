@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		752A4B3F1DDF620B001424F3 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 752A4B3E1DDF620B001424F3 /* logo.png */; };
 		8422C4241DCA9BE3005F11DF /* CarPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8422C4221DCA9BE3005F11DF /* CarPhotoCell.swift */; };
 		8422C4251DCA9BE3005F11DF /* CarPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8422C4231DCA9BE3005F11DF /* CarPhotosViewController.swift */; };
 		845555AB1DCA990900F71816 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845555AA1DCA990900F71816 /* AppDelegate.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		752A4B3E1DDF620B001424F3 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		8422C4221DCA9BE3005F11DF /* CarPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarPhotoCell.swift; sourceTree = "<group>"; };
 		8422C4231DCA9BE3005F11DF /* CarPhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarPhotosViewController.swift; sourceTree = "<group>"; };
 		845555A71DCA990900F71816 /* WeekendHeroes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeekendHeroes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +64,7 @@
 		8455559E1DCA990900F71816 = {
 			isa = PBXGroup;
 			children = (
+				752A4B3E1DDF620B001424F3 /* logo.png */,
 				849FD5661DDA572F007E8F7D /* 365_gt16-9.jpg */,
 				849FD5671DDA572F007E8F7D /* 550_maranello.jpg */,
 				849FD5681DDA572F007E8F7D /* alfasud-2_0.jpg */,
@@ -132,7 +135,6 @@
 				TargetAttributes = {
 					845555A61DCA990900F71816 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 636ZMZQP4X;
 						LastSwiftMigration = 0810;
 					};
 				};
@@ -170,6 +172,7 @@
 				849FD5731DDA572F007E8F7D /* aquarama_special_603-18_9.jpg in Resources */,
 				845555B21DCA990900F71816 /* Assets.xcassets in Resources */,
 				845555B01DCA990900F71816 /* Main.storyboard in Resources */,
+				752A4B3F1DDF620B001424F3 /* logo.png in Resources */,
 				849FD5721DDA572F007E8F7D /* alfasud-2_0.jpg in Resources */,
 				849FD5701DDA572F007E8F7D /* 365_gt16-9.jpg in Resources */,
 				849FD5741DDA572F007E8F7D /* ariston.jpg in Resources */,
@@ -307,6 +310,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = WeekendHeroes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hpf.WeekendHeroes;
@@ -320,6 +324,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = WeekendHeroes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hpf.WeekendHeroes;
