@@ -17,17 +17,11 @@ final class CarPhotosViewController: UICollectionViewController {
     let itemsPerRow: CGFloat = 2
     var items = ["k101_close.jpg", "550_maranello.jpg", "365_gt16-9.jpg", "ariston.jpg", "speedster_mobile.jpg", "m1_front_0.jpg"]
     
-}
-
-private extension CarPhotosViewController {
     func photoForIndexPath(_ indexPath: IndexPath) -> UIImage? {
         let image = UIImage(named: items[indexPath.row])
         return image!
     }
-}
-
-// MARK: - UICollectionViewDataSource
-extension CarPhotosViewController {
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return items.count
     }
@@ -40,12 +34,26 @@ extension CarPhotosViewController {
     }
 }
 
-
 extension CarPhotosViewController : UICollectionViewDelegateFlowLayout {
+    
+//    - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+//    {
+//    // Adjust cell size for orientation
+//    if (UIDeviceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation])) {
+//    return CGSizeMake(170.f, 170.f);
+//    }
+//    return CGSizeMake(192.f, 192.f);
+//    }
+//    
+//    - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+//    {
+//    [self.collectionView performBatchUpdates:nil completion:nil];
+//    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         var size = CGSize()
+        
         
         if UIDeviceOrientationIsLandscape(UIDevice.current.orientation) {
             size = CGSize(width: CELL_WIDTH * 2, height: CELL_HEIGHT * 2)
