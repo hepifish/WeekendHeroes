@@ -11,6 +11,8 @@ import UIKit
 class CarPhotoCell: UICollectionViewCell {
     
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var slidingImageView : UIImageView!
+    
 }
 
 
